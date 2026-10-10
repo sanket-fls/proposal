@@ -66,3 +66,20 @@ data/         history.json (delivery history), proposals.json (saved runs)
 ```
 
 Demo script: [DEMO.md](DEMO.md).
+# Netlify deployment
+
+Netlify reads `netlify.toml` at the repository root. Publish directory: `public`;
+functions directory: `netlify/functions`; no build command is required.
+The root URL rewrites to `app.html`. A serverless function serves `/api/*`,
+`/p/*`, `/mcp`, and `/widget.html`, including SSE proposal generation.
+Hosted proposals persist in Netlify Blobs; local Express runs retain JSON storage.
+
+Set `OPENAI_API_KEY` in Netlify's environment variables for live mode
+(`OPEN_AI_API_KEY` is also accepted by the hosted handler). Never put the key
+in the publish directory. Without a key, the deterministic engine works.
+Hosted model calls have shorter timeouts to leave room within the streaming
+function's execution limit; failed calls use the existing local fallbacks.
+
+Run `npx netlify build --offline` to verify packaging, or
+`npx netlify dev --offline --framework '#static' --port 8890 --no-open`
+to exercise routing, streaming and local Blobs storage.

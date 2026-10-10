@@ -7,7 +7,7 @@ export const enabled = () => Boolean(KEY());
 
 const headers = () => ({ "Content-Type": "application/json", Authorization: `Bearer ${KEY()}` });
 
-export async function structured(system, user, name, schema, { timeoutMs = 45000 } = {}) {
+export async function structured(system, user, name, schema, { timeoutMs = process.env.NETLIFY === "true" ? 15000 : 45000 } = {}) {
   const res = await fetch("https://api.openai.com/v1/responses", {
     method: "POST", headers: headers(), signal: AbortSignal.timeout(timeoutMs),
     body: JSON.stringify({ model: MODEL(), input: [{ role: "system", content: system }, { role: "user", content: user }], text: { format: { type: "json_schema", name, strict: true, schema } } }),
@@ -23,7 +23,7 @@ export async function embed(texts) {
   const missing = texts.filter((t) => !embedCache.has(t));
   if (missing.length) {
     const res = await fetch("https://api.openai.com/v1/embeddings", {
-      method: "POST", headers: headers(), signal: AbortSignal.timeout(30000),
+      method: "POST", headers: headers(), signal: AbortSignal.timeout(process.env.NETLIFY === "true" ? 10000 : 30000),
       body: JSON.stringify({ model: EMBED_MODEL(), input: missing }),
     });
     if (!res.ok) throw new Error(`OpenAI embeddings ${res.status}`);
@@ -34,7 +34,7 @@ export async function embed(texts) {
 }
 
 // Streams output text deltas to onToken; resolves with the full text.
-export async function stream(system, user, onToken, { timeoutMs = 60000 } = {}) {
+export async function stream(system, user, onToken, { timeoutMs = process.env.NETLIFY === "true" ? 20000 : 60000 } = {}) {
   const res = await fetch("https://api.openai.com/v1/responses", {
     method: "POST", headers: headers(), signal: AbortSignal.timeout(timeoutMs),
     body: JSON.stringify({ model: MODEL(), stream: true, input: [{ role: "system", content: system }, { role: "user", content: user }] }),

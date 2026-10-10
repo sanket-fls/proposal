@@ -4,11 +4,14 @@ import { CATEGORIES } from "./taxonomy.js";
 // only writes prose around them, so nothing in the document contradicts the estimate.
 
 export function planSummary(p) {
-  const rec = p.pricing.options.find((o) => o.recommended);
   return [
     `Client: ${p.client}`,
     `Requirements (${p.requirements.length}): ${p.requirements.map((r) => `${r.id} ${r.text} [${CATEGORIES[r.category].label}, complexity ${r.complexity}]`).join("; ")}`,
-    `Comparable past projects: ${p.matches.map((m) => `${m.title} (${m.year}, ${m.actualHours}h actual vs ${m.estimatedHours}h estimated, ${m.outcome})`).join("; ")}`,
+    `Comparable past projects (context only, not requirement evidence): ${p.matches.map((m) => `${m.title} (${m.year}, ${m.outcome})`).join("; ")}`,
+    `Requirement estimates and component evidence:\n${p.estimates.map((e) => JSON.stringify({
+      reqId: e.reqId, p50: e.p50, p90: e.p90, samples: e.samples,
+      evidence: e.evidence.map((ev) => ({ projectId: ev.projectId, projectTitle: ev.projectTitle, component: ev.component, year: ev.year, actualHours: ev.actualHours })),
+    })).join("\n")}`,
     `Phases: ${p.schedule.phases.map((ph) => `${ph.name} ${ph.weeks}w (${ph.hoursP50}-${ph.hoursP90}h)`).join(", ")}; total ${p.schedule.totalWeeks} weeks`,
     `Options: ${p.pricing.options.map((o) => `${o.name} ${o.label} / ${o.weeks} weeks`).join("; ")}`,
     `Risks: ${p.risks.map((k) => `${k.title} (${k.severity}) → ask: ${k.question}`).join("; ")}`,
@@ -32,7 +35,7 @@ export function composeLocal(p) {
   for (const e of p.estimates) {
     const r = p.requirements.find((x) => x.id === e.reqId);
     const ev = e.evidence[0];
-    lines.push(`- ${shorten(r.text)}: ${e.p50}–${e.p90}h from ${e.samples} comparable ${e.label.toLowerCase()} components${ev ? ` (${ev.component}, ${ev.year}: ${ev.actualHours}h actual)` : ""}; ${e.overrun}× overrun included.`);
+    lines.push(`- ${e.reqId} ${shorten(r.text)}: ${e.p50}–${e.p90}h from ${e.samples} comparable ${e.label.toLowerCase()} components${ev ? ` (${ev.component} — ${ev.projectTitle}, ${ev.year}: ${ev.actualHours}h actual)` : " (No historical component evidence; taxonomy baseline used)"}; ${e.overrun}× overrun included.`);
   }
   lines.push("", "## Your options");
   for (const o of p.pricing.options) lines.push(`- **${o.name}** — ${o.label}, ${o.weeks} weeks. ${o.tagline}.`);
@@ -44,4 +47,5 @@ export function composeLocal(p) {
 
 export const COMPOSE_SYSTEM = `You write short, concrete software proposals. You are given a computed plan: requirements, comparable past projects, phases with weeks, three priced options and risks with questions.
 Rules: use ONLY the numbers given, never invent or round them. Write to the client as "you". Short sentences, no hype, no exclamation marks.
+For "Why these numbers", use the component evidence attached to that exact reqId. Each bullet must name the requirement ID, its P50–P90 estimate, and at least one supplied component with its project title, year and actualHours. Component actual hours are historical observations, not the requirement estimate. Never substitute whole-project totals, cite a project merely because it is a retrieval match, or invent a component/project pairing. If evidence is empty, say "No historical component evidence; taxonomy baseline used" for that requirement.
 Structure in Markdown: "## Proposal for <client>", a 3-sentence summary, "## What we will deliver" (one line per phase with weeks), "## Why these numbers" (one bullet per requirement citing the past component and hours it came from), "## Your options" (three bullets), "## Before we start, we need to know" (the questions), "## Next step". Under 420 words.`;

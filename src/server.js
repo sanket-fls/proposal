@@ -11,18 +11,18 @@ import { SAMPLE_BRIEFS } from "./sample.js";
 
 const PORT = Number(process.env.PORT || 8787);
 const WIDGET_URI = "ui://widget/proposal-engine.html";
-const file = (p) => readFileSync(new URL(`../public/${p}`, import.meta.url), "utf8");
+const file = (p) => readFileSync(process.env.NETLIFY === "true" ? `${process.cwd()}/public/${p}` : new URL(`../public/${p}`, import.meta.url), "utf8");
 // The widget is one self-contained HTML file: app.html with the shared JS inlined.
 const widgetHtml = () => file("app.html").replace('<script src="/engine-ui.js"></script>', `<script>${file("engine-ui.js")}</script>`);
 
 const baseUrl = (req) => process.env.PUBLIC_URL?.replace(/\/$/, "") || `${req.headers["x-forwarded-proto"] || req.protocol}://${req.headers["x-forwarded-host"] || req.get("host")}`;
 
-function finish(result, base) {
-  const record = save({ ...result.proposal, events: result.events });
+export async function finish(result, base) {
+  const record = await save({ ...result.proposal, events: result.events });
   return { ...record, markdown: toMarkdown(record), shareUrl: `${base}/p/${record.id}` };
 }
 
-function createMcpServer(base) {
+export function createMcpServer(base) {
   const server = new McpServer({ name: "proposal-engine", version: "2.0.0" });
 
   server.registerResource("proposal-widget", WIDGET_URI, {}, async () => ({
@@ -44,7 +44,7 @@ function createMcpServer(base) {
     _meta: { "openai/outputTemplate": WIDGET_URI, "openai/toolInvocation/invoking": "Running the estimation engine…", "openai/toolInvocation/invoked": "Proposal built", "openai/widgetAccessible": true },
   }, async ({ brief }) => {
     // Full speed: ChatGPT waits for the tool; the widget replays the recorded event timing instead.
-    const p = finish(await run(brief, undefined, { pace: 0 }), base);
+    const p = await finish(await run(brief, undefined, { pace: 0 }), base);
     const rec = p.pricing.options.find((o) => o.recommended);
     return {
       content: [{ type: "text", text: `Built a proposal for ${p.client}: ${p.requirements.length} requirements, ${p.schedule.totalWeeks} weeks, recommended ${rec.label} (${p.currency ?? p.pricing.currency}), based on ${p.matches.length} comparable past projects. ${p.risks.filter((k) => k.severity === "high").length} high risks. Printable: ${p.shareUrl}. The widget replays the engine run; summarise in two sentences and list the client questions.` }],
@@ -54,7 +54,7 @@ function createMcpServer(base) {
   return server;
 }
 
-const app = express();
+export const app = express();
 app.use(express.json({ limit: "1mb" }));
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -87,7 +87,7 @@ app.post("/api/run", async (req, res) => {
   const write = (ev) => res.write(`data: ${JSON.stringify(ev)}\n\n`);
   try {
     const result = await run(brief, write);
-    const p = finish(result, baseUrl(req));
+    const p = await finish(result, baseUrl(req));
     write({ type: "saved", id: p.id, shareUrl: p.shareUrl, markdown: p.markdown });
   } catch (err) {
     console.error(err);
@@ -97,25 +97,25 @@ app.post("/api/run", async (req, res) => {
 });
 
 app.get("/api/history", (req, res) => res.json(history));
-app.get("/api/proposal/:id", (req, res) => {
-  const p = get(req.params.id);
+app.get("/api/proposal/:id", async (req, res) => {
+  const p = await get(req.params.id);
   if (!p) return res.status(404).json({ error: "not found" });
   res.json({ ...p, markdown: toMarkdown(p), shareUrl: `${baseUrl(req)}/p/${p.id}` });
 });
 
-app.get("/p/:id.md", (req, res) => {
-  const p = get(req.params.id);
+app.get("/p/:id.md", async (req, res) => {
+  const p = await get(req.params.id);
   if (!p) return res.status(404).send("Proposal not found");
   if (req.query.download) res.setHeader("Content-Disposition", `attachment; filename="${p.client.replace(/[^\w-]+/g, "-")}-proposal.md"`);
   res.type("text/markdown").send(toMarkdown(p));
 });
-app.get("/p/:id", (req, res) => {
-  const p = get(req.params.id);
+app.get("/p/:id", async (req, res) => {
+  const p = await get(req.params.id);
   if (!p) return res.status(404).send("Proposal not found");
   res.type("html").send(toPrintableHtml(p));
 });
 
-app.listen(PORT, () => {
+if (process.env.NETLIFY !== "true") app.listen(PORT, () => {
   console.log(`Proposal engine on http://localhost:${PORT}`);
   console.log(`  MCP: http://localhost:${PORT}/mcp · OpenAI: ${llm.enabled() ? `on (${llm.MODEL()})` : "off, deterministic engine only"} · history: ${history.length} projects`);
 });

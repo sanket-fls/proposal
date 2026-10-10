@@ -9,7 +9,7 @@ import { composeLocal, planSummary, COMPOSE_SYSTEM } from "./compose.js";
 import * as llm from "./llm.js";
 import { CATEGORIES } from "./taxonomy.js";
 
-export const history = JSON.parse(readFileSync(new URL("../../data/history.json", import.meta.url), "utf8"));
+export const history = JSON.parse(readFileSync(process.env.NETLIFY === "true" ? `${process.cwd()}/data/history.json` : new URL("../../data/history.json", import.meta.url), "utf8"));
 
 // Delays between emitted events so the UI can show the work. PACE=0 runs flat out (used by the ChatGPT tool).
 const PACE = process.env.PACE === undefined ? 1 : Number(process.env.PACE);

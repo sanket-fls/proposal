@@ -1,3 +1,5 @@
 node_modules/
 data/proposals.json
 .env
+.env.local
+.netlify/
