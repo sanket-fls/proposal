@@ -21,6 +21,8 @@ export default async function handler(request) {
     const stream = new ReadableStream({
       async start(controller) {
         const write = (event) => controller.enqueue(encoder.encode(`data: ${JSON.stringify(event)}\n\n`));
+        // Keep proxies active while a model is thinking and emits no tokens.
+        const heartbeat = setInterval(() => controller.enqueue(encoder.encode(": keepalive\n\n")), 4000);
         try {
           const result = await run(brief, write, { pace: 0 });
           const p = await finish(result, base);
@@ -28,7 +30,7 @@ export default async function handler(request) {
         } catch (error) {
           console.error(error);
           write({ type: "error", message: "Proposal generation failed. Please try again." });
-        } finally { controller.close(); }
+        } finally { clearInterval(heartbeat); controller.close(); }
       },
     });
     return new Response(stream, { headers: { "Content-Type": "text/event-stream", "Cache-Control": "no-cache" } });
