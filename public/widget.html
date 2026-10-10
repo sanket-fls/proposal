@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#111;--sec:#4B5563;--silver:#EBEDF0;--pale:#F8F9FA;--iron:#B7BDC5;--line:rgba(17,17,17,.08);
+--rose:#F49AB1;--mint:#86DEB4;--sky:#82C3FF;--lilac:#C0A1EE;--gold:#F0D679;--ease:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--silver);color:var(--ink);font:400 14px/1.5 Inter,system-ui,sans-serif}
+#app{padding:14px;max-width:900px;margin:0 auto}
+.card{background:#fff;border-radius:24px;padding:20px;margin-bottom:12px}
+.head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.logo{height:22px;display:block}
+.eyebrow{font:700 11px Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--sec)}
+h1{font:700 28px/1.05 "Space Grotesk",Inter,sans-serif;letter-spacing:-.03em;margin:6px 0 10px}
+h2{font:700 16px/1.2 "Space Grotesk",Inter,sans-serif;letter-spacing:-.01em;margin:0 0 8px}
+p{margin:0}.muted{color:var(--sec)}
+.mark{background:linear-gradient(transparent 62%,var(--gold) 62%,var(--gold) 94%,transparent 94%)}
+.metrics{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:10px;margin-bottom:12px}
+.metric{border-radius:20px;padding:14px 16px}
+.metric span{font:700 10px Inter;letter-spacing:.08em;text-transform:uppercase}
+.metric b{display:block;font:700 22px/1.15 "Space Grotesk",sans-serif;letter-spacing:-.02em;margin-top:4px;font-variant-numeric:tabular-nums}
+.gantt .row{display:grid;grid-template-columns:38% 1fr;gap:10px;align-items:center;margin:7px 0}
+.gantt .lbl{font-weight:700;font-size:12.5px;line-height:1.25}
+.track{position:relative;height:24px;background:var(--pale);border-radius:999px}
+.bar{position:absolute;top:0;bottom:0;border-radius:999px;font:700 11px/24px Inter;text-align:center;transform-origin:left;animation:grow .7s var(--ease) both}
+.weeks{display:flex;justify-content:space-between;font:700 10px Inter;color:var(--sec);margin:4px 0 0 calc(38% + 10px)}
+.phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.phase{border:1px solid var(--line);border-radius:20px;padding:14px;transition:transform .3s var(--ease)}
+.phase:hover{transform:translateY(-2px)}
+.ph-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.tag{font:700 10px Inter;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px;border:1px solid var(--line)}
+.ph-name{font:700 14.5px/1.2 "Space Grotesk",sans-serif;margin-bottom:4px}
+.ph-meta{font-size:12px;color:var(--sec);margin-bottom:6px}
+ul{margin:0;padding-left:16px}li{margin:3px 0;font-size:13px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sq{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px;vertical-align:1px}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.btn{font:700 13px Inter;border-radius:999px;padding:10px 18px;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;transition:transform .3s var(--ease)}
+.btn:hover{transform:translateY(-2px)}.btn.primary{background:var(--ink);color:#fff}
+.reveal{animation:up .6s var(--ease) both}
+@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.skel{height:14px;border-radius:999px;background:var(--pale);margin:10px 0;animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.4}}
+.toast{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:var(--ink);color:#fff;font:700 13px Inter;padding:10px 16px;border-radius:999px;opacity:0;transition:opacity .3s}
+.toast.on{opacity:1}
+@media(max-width:560px){.metrics,.two{grid-template-columns:1fr}h1{font-size:24px}.gantt .row{grid-template-columns:1fr}.weeks{margin-left:0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div class="toast" id="toast"></div>
+<script>
+(() => {
+  const app = document.getElementById("app");
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+  const ACC = { mint: "var(--mint)", sky: "var(--sky)", rose: "var(--rose)", lilac: "var(--lilac)", gold: "var(--gold)" };
+  let rendered = null;
+
+  const toast = (msg) => { const t = document.getElementById("toast"); t.textContent = msg; t.classList.add("on"); setTimeout(() => t.classList.remove("on"), 2200); };
+  const openUrl = (href) => {
+    if (window.openai?.openExternal) window.openai.openExternal({ href });
+    else window.open(href, "_blank", "noopener");
+  };
+
+  function loading() {
+    app.innerHTML = `<div class="card"><div class="head"><img class="logo" src="https://futurelabstudios.com/images/logo.png" alt="Futurelab Studios"><span class="eyebrow">Proposal Copilot</span></div>
+      <h2>Drafting your proposal…</h2><div class="skel" style="width:80%"></div><div class="skel" style="width:60%"></div><div class="skel" style="width:70%"></div></div>`;
+  }
+
+  // Count the price up from zero: the moment the room sees the number land.
+  function countUp(el, p) {
+    const sym = p.priceLabel.split(/[\d]/)[0];
+    const loc = { INR: "en-IN", USD: "en-US", AED: "en-AE", SGD: "en-SG" }[p.currency] || "en-US";
+    const start = performance.now(), dur = 1100;
+    const step = (t) => {
+      const k = Math.min(1, (t - start) / dur), e = 1 - Math.pow(1 - k, 4);
+      el.textContent = `${sym}${Math.round(p.priceLow * e).toLocaleString(loc)} – ${sym}${Math.round(p.priceHigh * e).toLocaleString(loc)}`;
+      if (k < 1) requestAnimationFrame(step); else el.textContent = p.priceLabel;
+    };
+    requestAnimationFrame(step);
+  }
+
+  function render(p) {
+    if (!p || !p.phases) return loading();
+    if (rendered === p.id) return;
+    rendered = p.id;
+    let d = 0; const delay = (extra = "") => `style="animation-delay:${(d++) * 90}ms;${extra}"`;
+    const words = esc(p.projectTitle).split(" ");
+    const title = words.length > 2 ? `${words.slice(0, -2).join(" ")} <span class="mark">${words.slice(-2).join(" ")}</span>` : esc(p.projectTitle);
+    const ticks = Array.from({ length: 5 }, (_, i) => Math.round((p.totalWeeks / 4) * i));
+
+    app.innerHTML = `
+      <div class="card reveal" ${delay()}>
+        <div class="head"><img class="logo" src="https://futurelabstudios.com/images/logo.png" alt="Futurelab Studios"><span class="eyebrow">Proposal for ${esc(p.clientName)}</span></div>
+        <h1>${title}</h1>
+        <p class="muted">${esc(p.problem)}</p>
+      </div>
+      <div class="metrics">
+        <div class="metric reveal" ${delay("background:var(--gold)")}><span>Investment · ${esc(p.currency)}</span><b id="price">${esc(p.priceLabel)}</b></div>
+        <div class="metric reveal" ${delay("background:var(--sky)")}><span>Timeline</span><b>${p.totalWeeks} weeks</b></div>
+        <div class="metric reveal" ${delay("background:#fff")}><span>Effort</span><b>${p.effortDays[0]}–${p.effortDays[1]} days</b></div>
+      </div>
+      <div class="card reveal" ${delay()}>
+        <h2>Our approach</h2><p>${esc(p.approach)}</p>
+      </div>
+      <div class="card reveal gantt" ${delay()}>
+        <h2>Timeline</h2>
+        ${p.phases.map((ph, i) => `<div class="row"><div class="lbl">${esc(ph.name)}</div><div class="track"><div class="bar" style="left:${(ph.startWeek / p.totalWeeks) * 100}%;width:${(ph.weeks / p.totalWeeks) * 100}%;background:${ACC[ph.accent]};animation-delay:${400 + i * 150}ms">${ph.weeks}w</div></div></div>`).join("")}
+        <div class="weeks">${ticks.map((w) => `<span>W${w}</span>`).join("")}</div>
+      </div>
+      <div class="card reveal" ${delay()}>
+        <h2>Scope</h2>
+        <div class="phases">${p.phases.map((ph, i) => `
+          <div class="phase">
+            <div class="ph-top"><span class="tag" style="background:${ACC[ph.accent]}">${esc(ph.stage)}</span><span class="eyebrow">0${i + 1}</span></div>
+            <div class="ph-name">${esc(ph.name)}</div>
+            <div class="ph-meta">Weeks ${ph.startWeek + 1}–${ph.startWeek + ph.weeks} · ${esc(p.phaseLabels[i])}</div>
+            <ul>${ph.deliverables.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+          </div>`).join("")}</div>
+      </div>
+      <div class="two">
+        <div class="card reveal" ${delay()}><h2><span class="sq" style="background:var(--mint)"></span>Outcomes</h2><ul>${p.outcomes.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
+        <div class="card reveal" ${delay()}><h2><span class="sq" style="background:var(--lilac)"></span>Assumptions</h2><ul>${p.assumptions.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
+      </div>
+      <div class="card reveal" ${delay()}>
+        <div class="actions">
+          <button class="btn primary" data-act="pdf">Open proposal · Save PDF</button>
+          <button class="btn" data-act="md">Download Markdown</button>
+          <button class="btn" data-act="copy">Copy for email</button>
+          ${window.openai?.sendFollowUpMessage ? `<button class="btn" data-act="pilot">Make it a 6-week pilot</button>` : ""}
+          ${window.openai?.requestDisplayMode ? `<button class="btn" data-act="full">Expand</button>` : ""}
+        </div>
+      </div>`;
+
+    countUp(document.getElementById("price"), p);
+
+    app.querySelectorAll("[data-act]").forEach((b) => b.addEventListener("click", async () => {
+      const act = b.dataset.act;
+      if (act === "pdf") openUrl(p.shareUrl);
+      if (act === "md") openUrl(p.shareUrl + ".md?download=1");
+      if (act === "copy") {
+        try { await navigator.clipboard.writeText(p.markdown); toast("Copied to clipboard"); }
+        catch { openUrl(p.shareUrl + ".md"); }
+      }
+      if (act === "pilot") window.openai.sendFollowUpMessage({ prompt: `Rework the ${p.clientName} proposal into a 6-week pilot: keep only the highest-value phase plus a short enablement phase, then call build_proposal again.` });
+      if (act === "full") window.openai.requestDisplayMode({ mode: "fullscreen" });
+    }));
+  }
+
+  const sync = () => render(window.openai?.toolOutput);
+  window.addEventListener("openai:set_globals", sync);
+  window.__renderProposal = render; // used by the standalone demo page
+  sync();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,2451 @@
+[
+ {
+  "id": "P-100",
+  "client": "BrightPath Academy",
+  "industry": "Education",
+  "year": 2024,
+  "title": "BrightPath Academy field app",
+  "summary": "Education client. Built push notifications, workflow mapping, audit log, hypercare, retrieval with citations.",
+  "teamSize": 4,
+  "plannedWeeks": 11,
+  "actualWeeks": 15,
+  "components": [
+   {
+    "name": "Push notifications",
+    "category": "mobile",
+    "complexity": 3,
+    "estimatedHours": 532,
+    "actualHours": 764
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 3,
+    "estimatedHours": 132,
+    "actualHours": 144
+   },
+   {
+    "name": "Audit log",
+    "category": "compliance",
+    "complexity": 3,
+    "estimatedHours": 128,
+    "actualHours": 184
+   },
+   {
+    "name": "Hypercare",
+    "category": "training",
+    "complexity": 3,
+    "estimatedHours": 122,
+    "actualHours": 135
+   },
+   {
+    "name": "Retrieval with citations",
+    "category": "knowledge-base",
+    "complexity": 1,
+    "estimatedHours": 94,
+    "actualHours": 80
+   }
+  ],
+  "estimatedHours": 1008,
+  "actualHours": 1307,
+  "outcome": "Pilot completed"
+ },
+ {
+  "id": "P-101",
+  "client": "Summit University",
+  "industry": "Education",
+  "year": 2024,
+  "title": "Summit University event pipeline",
+  "summary": "Education client. Built csv import pipeline, data audit, consent capture, lab information system connector, customer portal.",
+  "teamSize": 2,
+  "plannedWeeks": 9,
+  "actualWeeks": 12,
+  "components": [
+   {
+    "name": "CSV import pipeline",
+    "category": "data-pipeline",
+    "complexity": 2,
+    "estimatedHours": 176,
+    "actualHours": 228
+   },
+   {
+    "name": "Data audit",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 32,
+    "actualHours": 36
+   },
+   {
+    "name": "Consent capture",
+    "category": "compliance",
+    "complexity": 1,
+    "estimatedHours": 57,
+    "actualHours": 80
+   },
+   {
+    "name": "Lab information system connector",
+    "category": "integration",
+    "complexity": 3,
+    "estimatedHours": 260,
+    "actualHours": 257
+   },
+   {
+    "name": "Customer portal",
+    "category": "web-app",
+    "complexity": 3,
+    "estimatedHours": 312,
+    "actualHours": 464
+   }
+  ],
+  "estimatedHours": 837,
+  "actualHours": 1065,
+  "outcome": "Live, follow-on phase sold"
+ },
+ {
+  "id": "P-102",
+  "client": "LearnLoop",
+  "industry": "Education",
+  "year": 2025,
+  "title": "LearnLoop product knowledge hub",
+  "summary": "Education client. Built knowledge base admin, success metrics, ios/android app, audit log, triage classifier, crm read/write api.",
+  "teamSize": 2,
+  "plannedWeeks": 8,
+  "actualWeeks": 11,
+  "components": [
+   {
+    "name": "Knowledge base admin",
+    "category": "knowledge-base",
+    "complexity": 2,
+    "estimatedHours": 129,
+    "actualHours": 139
+   },
+   {
+    "name": "Success metrics",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 45,
+    "actualHours": 52
+   },
+   {
+    "name": "iOS/Android app",
+    "category": "mobile",
+    "complexity": 1,
+    "estimatedHours": 134,
+    "actualHours": 156
+   },
+   {
+    "name": "Audit log",
+    "category": "compliance",
+    "complexity": 2,
+    "estimatedHours": 104,
+    "actualHours": 144
+   },
+   {
+    "name": "Triage classifier",
+    "category": "llm-assistant",
+    "complexity": 2,
+    "estimatedHours": 193,
+    "actualHours": 254
+   },
+   {
+    "name": "CRM read/write API",
+    "category": "integration",
+    "complexity": 2,
+    "estimatedHours": 142,
+    "actualHours": 210
+   }
+  ],
+  "estimatedHours": 747,
+  "actualHours": 955,
+  "outcome": "Live, expanded to second team"
+ },
+ {
+  "id": "P-103",
+  "client": "Transit Authority",
+  "industry": "Public sector",
+  "year": 2023,
+  "title": "Transit Authority customer portal",
+  "summary": "Public sector client. Built customer portal, workflow mapping, sso (saml/oidc), pii redaction, erp order lookup.",
+  "teamSize": 3,
+  "plannedWeeks": 6,
+  "actualWeeks": 9,
+  "components": [
+   {
+    "name": "Customer portal",
+    "category": "web-app",
+    "complexity": 3,
+    "estimatedHours": 244,
+    "actualHours": 363
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 3,
+    "estimatedHours": 80,
+    "actualHours": 83
+   },
+   {
+    "name": "SSO (SAML/OIDC)",
+    "category": "auth",
+    "complexity": 1,
+    "estimatedHours": 48,
+    "actualHours": 58
+   },
+   {
+    "name": "PII redaction",
+    "category": "compliance",
+    "complexity": 1,
+    "estimatedHours": 71,
+    "actualHours": 112
+   },
+   {
+    "name": "ERP order lookup",
+    "category": "integration",
+    "complexity": 1,
+    "estimatedHours": 108,
+    "actualHours": 163
+   }
+  ],
+  "estimatedHours": 551,
+  "actualHours": 779,
+  "outcome": "Live, in daily use"
+ },
+ {
+  "id": "P-104",
+  "client": "Oasis Resorts",
+  "industry": "Hospitality",
+  "year": 2023,
+  "title": "Oasis Resorts SLA reporting",
+  "summary": "Hospitality client. Built usage analytics, workflow mapping, playbook & videos.",
+  "teamSize": 2,
+  "plannedWeeks": 3,
+  "actualWeeks": 3,
+  "components": [
+   {
+    "name": "Usage analytics",
+    "category": "dashboard",
+    "complexity": 2,
+    "estimatedHours": 107,
+    "actualHours": 108
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 57,
+    "actualHours": 64
+   },
+   {
+    "name": "Playbook & videos",
+    "category": "training",
+    "complexity": 2,
+    "estimatedHours": 72,
+    "actualHours": 67
+   }
+  ],
+  "estimatedHours": 236,
+  "actualHours": 239,
+  "outcome": "Pilot completed"
+ },
+ {
+  "id": "P-105",
+  "client": "Vertex Plastics",
+  "industry": "Manufacturing",
+  "year": 2023,
+  "title": "Vertex Plastics lead qualification flow",
+  "summary": "Manufacturing client. Built auto-reply for status queries, success metrics, quality dashboard, erp order lookup.",
+  "teamSize": 3,
+  "plannedWeeks": 6,
+  "actualWeeks": 8,
+  "components": [
+   {
+    "name": "Auto-reply for status queries",
+    "category": "automation",
+    "complexity": 2,
+    "estimatedHours": 183,
+    "actualHours": 190
+   },
+   {
+    "name": "Success metrics",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 69,
+    "actualHours": 66
+   },
+   {
+    "name": "Quality dashboard",
+    "category": "dashboard",
+    "complexity": 2,
+    "estimatedHours": 117,
+    "actualHours": 150
+   },
+   {
+    "name": "ERP order lookup",
+    "category": "integration",
+    "complexity": 2,
+    "estimatedHours": 170,
+    "actualHours": 314
+   }
+  ],
+  "estimatedHours": 539,
+  "actualHours": 720,
+  "outcome": "Live, expanded to second team"
+ },
+ {
+  "id": "P-106",
+  "client": "Summit University",
+  "industry": "Education",
+  "year": 2025,
+  "title": "Summit University field app",
+  "summary": "Education client. Built push notifications, success metrics, agent console ui, usage analytics, auto-reply for status queries.",
+  "teamSize": 2,
+  "plannedWeeks": 11,
+  "actualWeeks": 13,
+  "components": [
+   {
+    "name": "Push notifications",
+    "category": "mobile",
+    "complexity": 1,
+    "estimatedHours": 162,
+    "actualHours": 259
+   },
+   {
+    "name": "Success metrics",
+    "category": "discovery",
+    "complexity": 3,
+    "estimatedHours": 82,
+    "actualHours": 96
+   },
+   {
+    "name": "Agent console UI",
+    "category": "web-app",
+    "complexity": 3,
+    "estimatedHours": 312,
+    "actualHours": 336
+   },
+   {
+    "name": "Usage analytics",
+    "category": "dashboard",
+    "complexity": 2,
+    "estimatedHours": 133,
+    "actualHours": 157
+   },
+   {
+    "name": "Auto-reply for status queries",
+    "category": "automation",
+    "complexity": 3,
+    "estimatedHours": 294,
+    "actualHours": 355
+   }
+  ],
+  "estimatedHours": 983,
+  "actualHours": 1203,
+  "outcome": "Live, follow-on phase sold"
+ },
+ {
+  "id": "P-107",
+  "client": "Precision Parts Co",
+  "industry": "Manufacturing",
+  "year": 2023,
+  "title": "Precision Parts Co data warehouse sync",
+  "summary": "Manufacturing client. Built event stream, data audit, agent console ui.",
+  "teamSize": 2,
+  "plannedWeeks": 4,
+  "actualWeeks": 5,
+  "components": [
+   {
+    "name": "Event stream",
+    "category": "data-pipeline",
+    "complexity": 2,
+    "estimatedHours": 127,
+    "actualHours": 160
+   },
+   {
+    "name": "Data audit",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 41,
+    "actualHours": 40
+   },
+   {
+    "name": "Agent console UI",
+    "category": "web-app",
+    "complexity": 2,
+    "estimatedHours": 168,
+    "actualHours": 211
+   }
+  ],
+  "estimatedHours": 336,
+  "actualHours": 411,
+  "outcome": "Pilot completed"
+ },
+ {
+  "id": "P-108",
+  "client": "Northgate Finance",
+  "industry": "Banking",
+  "year": 2023,
+  "title": "Northgate Finance ticketing integration",
+  "summary": "Banking client. Built erp order lookup, workflow mapping, pii redaction, usage analytics, role-based access.",
+  "teamSize": 2,
+  "plannedWeeks": 5,
+  "actualWeeks": 7,
+  "components": [
+   {
+    "name": "ERP order lookup",
+    "category": "integration",
+    "complexity": 1,
+    "estimatedHours": 118,
+    "actualHours": 181
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 34,
+    "actualHours": 39
+   },
+   {
+    "name": "PII redaction",
+    "category": "compliance",
+    "complexity": 2,
+    "estimatedHours": 87,
+    "actualHours": 158
+   },
+   {
+    "name": "Usage analytics",
+    "category": "dashboard",
+    "complexity": 1,
+    "estimatedHours": 78,
+    "actualHours": 85
+   },
+   {
+    "name": "Role-based access",
+    "category": "auth",
+    "complexity": 3,
+    "estimatedHours": 121,
+    "actualHours": 129
+   }
+  ],
+  "estimatedHours": 438,
+  "actualHours": 592,
+  "outcome": "Pilot completed"
+ },
+ {
+  "id": "P-109",
+  "client": "Metro Estates",
+  "industry": "Real estate",
+  "year": 2025,
+  "title": "Metro Estates ticket auto-routing",
+  "summary": "Real estate client. Built escalation rules engine, workflow mapping, customer portal, ivr hooks, role-based access, event stream.",
+  "teamSize": 4,
+  "plannedWeeks": 10,
+  "actualWeeks": 11,
+  "components": [
+   {
+    "name": "Escalation rules engine",
+    "category": "automation",
+    "complexity": 2,
+    "estimatedHours": 181,
+    "actualHours": 237
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 3,
+    "estimatedHours": 114,
+    "actualHours": 116
+   },
+   {
+    "name": "Customer portal",
+    "category": "web-app",
+    "complexity": 3,
+    "estimatedHours": 212,
+    "actualHours": 198
+   },
+   {
+    "name": "IVR hooks",
+    "category": "channel",
+    "complexity": 2,
+    "estimatedHours": 100,
+    "actualHours": 105
+   },
+   {
+    "name": "Role-based access",
+    "category": "auth",
+    "complexity": 2,
+    "estimatedHours": 72,
+    "actualHours": 75
+   },
+   {
+    "name": "Event stream",
+    "category": "data-pipeline",
+    "complexity": 3,
+    "estimatedHours": 218,
+    "actualHours": 257
+   }
+  ],
+  "estimatedHours": 897,
+  "actualHours": 988,
+  "outcome": "Live"
+ },
+ {
+  "id": "P-110",
+  "client": "Urban Basket",
+  "industry": "Retail",
+  "year": 2025,
+  "title": "Urban Basket support reply assistant",
+  "summary": "Retail client. Built q&a assistant, workflow mapping, quality dashboard, sso (saml/oidc), knowledge base admin.",
+  "teamSize": 3,
+  "plannedWeeks": 8,
+  "actualWeeks": 9,
+  "components": [
+   {
+    "name": "Q&A assistant",
+    "category": "llm-assistant",
+    "complexity": 2,
+    "estimatedHours": 208,
+    "actualHours": 262
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 51,
+    "actualHours": 52
+   },
+   {
+    "name": "Quality dashboard",
+    "category": "dashboard",
+    "complexity": 2,
+    "estimatedHours": 140,
+    "actualHours": 127
+   },
+   {
+    "name": "SSO (SAML/OIDC)",
+    "category": "auth",
+    "complexity": 3,
+    "estimatedHours": 121,
+    "actualHours": 126
+   },
+   {
+    "name": "Knowledge base admin",
+    "category": "knowledge-base",
+    "complexity": 3,
+    "estimatedHours": 170,
+    "actualHours": 238
+   }
+  ],
+  "estimatedHours": 690,
+  "actualHours": 805,
+  "outcome": "Live"
+ },
+ {
+  "id": "P-111",
+  "client": "Metricly",
+  "industry": "SaaS",
+  "year": 2024,
+  "title": "Metricly customer portal",
+  "summary": "SaaS client. Built customer portal, success metrics, playbook & videos, document ingestion & chunking.",
+  "teamSize": 3,
+  "plannedWeeks": 6,
+  "actualWeeks": 8,
+  "components": [
+   {
+    "name": "Customer portal",
+    "category": "web-app",
+    "complexity": 2,
+    "estimatedHours": 169,
+    "actualHours": 194
+   },
+   {
+    "name": "Success metrics",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 61,
+    "actualHours": 59
+   },
+   {
+    "name": "Playbook & videos",
+    "category": "training",
+    "complexity": 3,
+    "estimatedHours": 112,
+    "actualHours": 109
+   },
+   {
+    "name": "Document ingestion & chunking",
+    "category": "knowledge-base",
+    "complexity": 3,
+    "estimatedHours": 238,
+    "actualHours": 353
+   }
+  ],
+  "estimatedHours": 580,
+  "actualHours": 715,
+  "outcome": "Live, in daily use"
+ },
+ {
+  "id": "P-112",
+  "client": "BlueLine Couriers",
+  "industry": "Logistics",
+  "year": 2023,
+  "title": "BlueLine Couriers field app",
+  "summary": "Logistics client. Built push notifications, workflow mapping, q&a assistant, lead routing, sso (saml/oidc), document ingestion & chunking.",
+  "teamSize": 2,
+  "plannedWeeks": 11,
+  "actualWeeks": 15,
+  "components": [
+   {
+    "name": "Push notifications",
+    "category": "mobile",
+    "complexity": 3,
+    "estimatedHours": 392,
+    "actualHours": 564
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 48,
+    "actualHours": 52
+   },
+   {
+    "name": "Q&A assistant",
+    "category": "llm-assistant",
+    "complexity": 3,
+    "estimatedHours": 288,
+    "actualHours": 411
+   },
+   {
+    "name": "Lead routing",
+    "category": "automation",
+    "complexity": 1,
+    "estimatedHours": 76,
+    "actualHours": 100
+   },
+   {
+    "name": "SSO (SAML/OIDC)",
+    "category": "auth",
+    "complexity": 1,
+    "estimatedHours": 47,
+    "actualHours": 42
+   },
+   {
+    "name": "Document ingestion & chunking",
+    "category": "knowledge-base",
+    "complexity": 2,
+    "estimatedHours": 136,
+    "actualHours": 149
+   }
+  ],
+  "estimatedHours": 987,
+  "actualHours": 1318,
+  "outcome": "Live, follow-on phase sold"
+ },
+ {
+  "id": "P-113",
+  "client": "LearnLoop",
+  "industry": "Education",
+  "year": 2023,
+  "title": "LearnLoop ticketing integration",
+  "summary": "Education client. Built erp order lookup, success metrics, usage analytics, hypercare, triage classifier, document ingestion & chunking.",
+  "teamSize": 3,
+  "plannedWeeks": 8,
+  "actualWeeks": 9,
+  "components": [
+   {
+    "name": "ERP order lookup",
+    "category": "integration",
+    "complexity": 3,
+    "estimatedHours": 304,
+    "actualHours": 406
+   },
+   {
+    "name": "Success metrics",
+    "category": "discovery",
+    "complexity": 3,
+    "estimatedHours": 104,
+    "actualHours": 100
+   },
+   {
+    "name": "Usage analytics",
+    "category": "dashboard",
+    "complexity": 1,
+    "estimatedHours": 66,
+    "actualHours": 65
+   },
+   {
+    "name": "Hypercare",
+    "category": "training",
+    "complexity": 1,
+    "estimatedHours": 32,
+    "actualHours": 33
+   },
+   {
+    "name": "Triage classifier",
+    "category": "llm-assistant",
+    "complexity": 1,
+    "estimatedHours": 129,
+    "actualHours": 124
+   },
+   {
+    "name": "Document ingestion & chunking",
+    "category": "knowledge-base",
+    "complexity": 1,
+    "estimatedHours": 75,
+    "actualHours": 90
+   }
+  ],
+  "estimatedHours": 710,
+  "actualHours": 818,
+  "outcome": "Live"
+ },
+ {
+  "id": "P-114",
+  "client": "Pioneer Credit Union",
+  "industry": "Banking",
+  "year": 2025,
+  "title": "Pioneer Credit Union ticket auto-routing",
+  "summary": "Banking client. Built escalation rules engine, workflow mapping, sso (saml/oidc), push notifications.",
+  "teamSize": 3,
+  "plannedWeeks": 7,
+  "actualWeeks": 9,
+  "components": [
+   {
+    "name": "Escalation rules engine",
+    "category": "automation",
+    "complexity": 1,
+    "estimatedHours": 84,
+    "actualHours": 89
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 3,
+    "estimatedHours": 116,
+    "actualHours": 124
+   },
+   {
+    "name": "SSO (SAML/OIDC)",
+    "category": "auth",
+    "complexity": 1,
+    "estimatedHours": 32,
+    "actualHours": 33
+   },
+   {
+    "name": "Push notifications",
+    "category": "mobile",
+    "complexity": 3,
+    "estimatedHours": 388,
+    "actualHours": 590
+   }
+  ],
+  "estimatedHours": 620,
+  "actualHours": 836,
+  "outcome": "Pilot completed"
+ },
+ {
+  "id": "P-115",
+  "client": "Pioneer Credit Union",
+  "industry": "Banking",
+  "year": 2023,
+  "title": "Pioneer Credit Union claims triage assistant",
+  "summary": "Banking client. Built triage classifier, success metrics, slack app, admin settings, consent capture.",
+  "teamSize": 4,
+  "plannedWeeks": 6,
+  "actualWeeks": 7,
+  "components": [
+   {
+    "name": "Triage classifier",
+    "category": "llm-assistant",
+    "complexity": 1,
+    "estimatedHours": 134,
+    "actualHours": 159
+   },
+   {
+    "name": "Success metrics",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 50,
+    "actualHours": 53
+   },
+   {
+    "name": "Slack app",
+    "category": "channel",
+    "complexity": 1,
+    "estimatedHours": 50,
+    "actualHours": 59
+   },
+   {
+    "name": "Admin settings",
+    "category": "web-app",
+    "complexity": 2,
+    "estimatedHours": 182,
+    "actualHours": 225
+   },
+   {
+    "name": "Consent capture",
+    "category": "compliance",
+    "complexity": 3,
+    "estimatedHours": 129,
+    "actualHours": 141
+   }
+  ],
+  "estimatedHours": 545,
+  "actualHours": 637,
+  "outcome": "Live, in daily use"
+ },
+ {
+  "id": "P-116",
+  "client": "ClearCover",
+  "industry": "Insurance",
+  "year": 2024,
+  "title": "ClearCover field app",
+  "summary": "Insurance client. Built ios/android app, workflow mapping, sso (saml/oidc), admin settings, calendar/slot api, usage analytics.",
+  "teamSize": 4,
+  "plannedWeeks": 8,
+  "actualWeeks": 11,
+  "components": [
+   {
+    "name": "iOS/Android app",
+    "category": "mobile",
+    "complexity": 1,
+    "estimatedHours": 176,
+    "actualHours": 224
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 86,
+    "actualHours": 75
+   },
+   {
+    "name": "SSO (SAML/OIDC)",
+    "category": "auth",
+    "complexity": 1,
+    "estimatedHours": 57,
+    "actualHours": 70
+   },
+   {
+    "name": "Admin settings",
+    "category": "web-app",
+    "complexity": 1,
+    "estimatedHours": 80,
+    "actualHours": 101
+   },
+   {
+    "name": "Calendar/slot API",
+    "category": "integration",
+    "complexity": 2,
+    "estimatedHours": 157,
+    "actualHours": 287
+   },
+   {
+    "name": "Usage analytics",
+    "category": "dashboard",
+    "complexity": 3,
+    "estimatedHours": 192,
+    "actualHours": 216
+   }
+  ],
+  "estimatedHours": 748,
+  "actualHours": 973,
+  "outcome": "Live, follow-on phase sold"
+ },
+ {
+  "id": "P-117",
+  "client": "Flowdesk",
+  "industry": "SaaS",
+  "year": 2024,
+  "title": "Flowdesk customer portal",
+  "summary": "SaaS client. Built agent console ui, data audit, lab information system connector, consent capture, event stream, usage analytics.",
+  "teamSize": 4,
+  "plannedWeeks": 12,
+  "actualWeeks": 12,
+  "components": [
+   {
+    "name": "Agent console UI",
+    "category": "web-app",
+    "complexity": 3,
+    "estimatedHours": 321,
+    "actualHours": 333
+   },
+   {
+    "name": "Data audit",
+    "category": "discovery",
+    "complexity": 3,
+    "estimatedHours": 89,
+    "actualHours": 96
+   },
+   {
+    "name": "Lab information system connector",
+    "category": "integration",
+    "complexity": 3,
+    "estimatedHours": 321,
+    "actualHours": 326
+   },
+   {
+    "name": "Consent capture",
+    "category": "compliance",
+    "complexity": 2,
+    "estimatedHours": 117,
+    "actualHours": 144
+   },
+   {
+    "name": "Event stream",
+    "category": "data-pipeline",
+    "complexity": 2,
+    "estimatedHours": 190,
+    "actualHours": 133
+   },
+   {
+    "name": "Usage analytics",
+    "category": "dashboard",
+    "complexity": 1,
+    "estimatedHours": 47,
+    "actualHours": 46
+   }
+  ],
+  "estimatedHours": 1085,
+  "actualHours": 1078,
+  "outcome": "Live, follow-on phase sold"
+ },
+ {
+  "id": "P-118",
+  "client": "Atlas Mutual",
+  "industry": "Insurance",
+  "year": 2023,
+  "title": "Atlas Mutual ticketing integration",
+  "summary": "Insurance client. Built crm read/write api, workflow mapping, audit log.",
+  "teamSize": 2,
+  "plannedWeeks": 3,
+  "actualWeeks": 4,
+  "components": [
+   {
+    "name": "CRM read/write API",
+    "category": "integration",
+    "complexity": 2,
+    "estimatedHours": 165,
+    "actualHours": 170
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 43,
+    "actualHours": 40
+   },
+   {
+    "name": "Audit log",
+    "category": "compliance",
+    "complexity": 2,
+    "estimatedHours": 102,
+    "actualHours": 129
+   }
+  ],
+  "estimatedHours": 310,
+  "actualHours": 339,
+  "outcome": "Live, expanded to second team"
+ },
+ {
+  "id": "P-119",
+  "client": "Flowdesk",
+  "industry": "SaaS",
+  "year": 2023,
+  "title": "Flowdesk self-serve status replies",
+  "summary": "SaaS client. Built lead routing, data audit, quality dashboard, customer portal, slack app.",
+  "teamSize": 3,
+  "plannedWeeks": 7,
+  "actualWeeks": 9,
+  "components": [
+   {
+    "name": "Lead routing",
+    "category": "automation",
+    "complexity": 2,
+    "estimatedHours": 121,
+    "actualHours": 189
+   },
+   {
+    "name": "Data audit",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 37,
+    "actualHours": 40
+   },
+   {
+    "name": "Quality dashboard",
+    "category": "dashboard",
+    "complexity": 3,
+    "estimatedHours": 188,
+    "actualHours": 165
+   },
+   {
+    "name": "Customer portal",
+    "category": "web-app",
+    "complexity": 3,
+    "estimatedHours": 238,
+    "actualHours": 317
+   },
+   {
+    "name": "Slack app",
+    "category": "channel",
+    "complexity": 2,
+    "estimatedHours": 90,
+    "actualHours": 110
+   }
+  ],
+  "estimatedHours": 674,
+  "actualHours": 821,
+  "outcome": "Pilot completed"
+ },
+ {
+  "id": "P-120",
+  "client": "Metricly",
+  "industry": "SaaS",
+  "year": 2025,
+  "title": "Metricly invoice processing automation",
+  "summary": "SaaS client. Built lead routing, data audit, usage analytics, push notifications.",
+  "teamSize": 3,
+  "plannedWeeks": 7,
+  "actualWeeks": 9,
+  "components": [
+   {
+    "name": "Lead routing",
+    "category": "automation",
+    "complexity": 3,
+    "estimatedHours": 263,
+    "actualHours": 368
+   },
+   {
+    "name": "Data audit",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 30,
+    "actualHours": 31
+   },
+   {
+    "name": "Usage analytics",
+    "category": "dashboard",
+    "complexity": 3,
+    "estimatedHours": 173,
+    "actualHours": 186
+   },
+   {
+    "name": "Push notifications",
+    "category": "mobile",
+    "complexity": 2,
+    "estimatedHours": 193,
+    "actualHours": 231
+   }
+  ],
+  "estimatedHours": 659,
+  "actualHours": 816,
+  "outcome": "Live"
+ },
+ {
+  "id": "P-121",
+  "client": "Vertex Plastics",
+  "industry": "Manufacturing",
+  "year": 2025,
+  "title": "Vertex Plastics field app",
+  "summary": "Manufacturing client. Built push notifications, success metrics, csv import pipeline.",
+  "teamSize": 2,
+  "plannedWeeks": 5,
+  "actualWeeks": 7,
+  "components": [
+   {
+    "name": "Push notifications",
+    "category": "mobile",
+    "complexity": 2,
+    "estimatedHours": 250,
+    "actualHours": 359
+   },
+   {
+    "name": "Success metrics",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 46,
+    "actualHours": 50
+   },
+   {
+    "name": "CSV import pipeline",
+    "category": "data-pipeline",
+    "complexity": 3,
+    "estimatedHours": 182,
+    "actualHours": 246
+   }
+  ],
+  "estimatedHours": 478,
+  "actualHours": 655,
+  "outcome": "Live, expanded to second team"
+ },
+ {
+  "id": "P-122",
+  "client": "Crescent Bank",
+  "industry": "Banking",
+  "year": 2024,
+  "title": "Crescent Bank data warehouse sync",
+  "summary": "Banking client. Built event stream, data audit, erp order lookup, summarisation assistant, ios/android app.",
+  "teamSize": 4,
+  "plannedWeeks": 9,
+  "actualWeeks": 12,
+  "components": [
+   {
+    "name": "Event stream",
+    "category": "data-pipeline",
+    "complexity": 2,
+    "estimatedHours": 140,
+    "actualHours": 132
+   },
+   {
+    "name": "Data audit",
+    "category": "discovery",
+    "complexity": 3,
+    "estimatedHours": 88,
+    "actualHours": 99
+   },
+   {
+    "name": "ERP order lookup",
+    "category": "integration",
+    "complexity": 1,
+    "estimatedHours": 114,
+    "actualHours": 244
+   },
+   {
+    "name": "Summarisation assistant",
+    "category": "llm-assistant",
+    "complexity": 3,
+    "estimatedHours": 312,
+    "actualHours": 290
+   },
+   {
+    "name": "iOS/Android app",
+    "category": "mobile",
+    "complexity": 1,
+    "estimatedHours": 156,
+    "actualHours": 279
+   }
+  ],
+  "estimatedHours": 810,
+  "actualHours": 1044,
+  "outcome": "Live"
+ },
+ {
+  "id": "P-123",
+  "client": "FreshMart",
+  "industry": "Retail",
+  "year": 2025,
+  "title": "FreshMart agent console",
+  "summary": "Retail client. Built customer portal, data audit, csv import pipeline.",
+  "teamSize": 4,
+  "plannedWeeks": 4,
+  "actualWeeks": 5,
+  "components": [
+   {
+    "name": "Customer portal",
+    "category": "web-app",
+    "complexity": 2,
+    "estimatedHours": 153,
+    "actualHours": 195
+   },
+   {
+    "name": "Data audit",
+    "category": "discovery",
+    "complexity": 3,
+    "estimatedHours": 93,
+    "actualHours": 109
+   },
+   {
+    "name": "CSV import pipeline",
+    "category": "data-pipeline",
+    "complexity": 1,
+    "estimatedHours": 76,
+    "actualHours": 104
+   }
+  ],
+  "estimatedHours": 322,
+  "actualHours": 408,
+  "outcome": "Pilot completed"
+ },
+ {
+  "id": "P-124",
+  "client": "Northgate Finance",
+  "industry": "Banking",
+  "year": 2025,
+  "title": "Northgate Finance event pipeline",
+  "summary": "Banking client. Built event stream, data audit, draft-reply assistant, knowledge base admin, push notifications.",
+  "teamSize": 2,
+  "plannedWeeks": 8,
+  "actualWeeks": 11,
+  "components": [
+   {
+    "name": "Event stream",
+    "category": "data-pipeline",
+    "complexity": 2,
+    "estimatedHours": 166,
+    "actualHours": 246
+   },
+   {
+    "name": "Data audit",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 35,
+    "actualHours": 34
+   },
+   {
+    "name": "Draft-reply assistant",
+    "category": "llm-assistant",
+    "complexity": 2,
+    "estimatedHours": 222,
+    "actualHours": 264
+   },
+   {
+    "name": "Knowledge base admin",
+    "category": "knowledge-base",
+    "complexity": 2,
+    "estimatedHours": 129,
+    "actualHours": 180
+   },
+   {
+    "name": "Push notifications",
+    "category": "mobile",
+    "complexity": 1,
+    "estimatedHours": 135,
+    "actualHours": 261
+   }
+  ],
+  "estimatedHours": 687,
+  "actualHours": 985,
+  "outcome": "Live, expanded to second team"
+ },
+ {
+  "id": "P-125",
+  "client": "LearnLoop",
+  "industry": "Education",
+  "year": 2023,
+  "title": "LearnLoop agent console",
+  "summary": "Education client. Built customer portal, workflow mapping, ios/android app, whatsapp business api, sla report.",
+  "teamSize": 4,
+  "plannedWeeks": 9,
+  "actualWeeks": 10,
+  "components": [
+   {
+    "name": "Customer portal",
+    "category": "web-app",
+    "complexity": 2,
+    "estimatedHours": 178,
+    "actualHours": 193
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 63,
+    "actualHours": 68
+   },
+   {
+    "name": "iOS/Android app",
+    "category": "mobile",
+    "complexity": 2,
+    "estimatedHours": 284,
+    "actualHours": 365
+   },
+   {
+    "name": "WhatsApp Business API",
+    "category": "channel",
+    "complexity": 3,
+    "estimatedHours": 147,
+    "actualHours": 157
+   },
+   {
+    "name": "SLA report",
+    "category": "dashboard",
+    "complexity": 2,
+    "estimatedHours": 102,
+    "actualHours": 91
+   }
+  ],
+  "estimatedHours": 774,
+  "actualHours": 874,
+  "outcome": "Live, follow-on phase sold"
+ },
+ {
+  "id": "P-126",
+  "client": "Precision Parts Co",
+  "industry": "Manufacturing",
+  "year": 2025,
+  "title": "Precision Parts Co quality dashboard",
+  "summary": "Manufacturing client. Built sla report, workflow mapping, sso (saml/oidc), hypercare.",
+  "teamSize": 4,
+  "plannedWeeks": 4,
+  "actualWeeks": 4,
+  "components": [
+   {
+    "name": "SLA report",
+    "category": "dashboard",
+    "complexity": 2,
+    "estimatedHours": 117,
+    "actualHours": 141
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 75,
+    "actualHours": 74
+   },
+   {
+    "name": "SSO (SAML/OIDC)",
+    "category": "auth",
+    "complexity": 1,
+    "estimatedHours": 54,
+    "actualHours": 52
+   },
+   {
+    "name": "Hypercare",
+    "category": "training",
+    "complexity": 3,
+    "estimatedHours": 113,
+    "actualHours": 106
+   }
+  ],
+  "estimatedHours": 359,
+  "actualHours": 373,
+  "outcome": "Live, in daily use"
+ },
+ {
+  "id": "P-127",
+  "client": "Hale & Partners",
+  "industry": "Legal",
+  "year": 2023,
+  "title": "Hale & Partners customer portal",
+  "summary": "Legal client. Built agent console ui, data audit, audit log, quality dashboard.",
+  "teamSize": 2,
+  "plannedWeeks": 7,
+  "actualWeeks": 8,
+  "components": [
+   {
+    "name": "Agent console UI",
+    "category": "web-app",
+    "complexity": 2,
+    "estimatedHours": 197,
+    "actualHours": 206
+   },
+   {
+    "name": "Data audit",
+    "category": "discovery",
+    "complexity": 3,
+    "estimatedHours": 94,
+    "actualHours": 97
+   },
+   {
+    "name": "Audit log",
+    "category": "compliance",
+    "complexity": 3,
+    "estimatedHours": 151,
+    "actualHours": 234
+   },
+   {
+    "name": "Quality dashboard",
+    "category": "dashboard",
+    "complexity": 3,
+    "estimatedHours": 205,
+    "actualHours": 215
+   }
+  ],
+  "estimatedHours": 647,
+  "actualHours": 752,
+  "outcome": "Live, expanded to second team"
+ },
+ {
+  "id": "P-128",
+  "client": "Urban Basket",
+  "industry": "Retail",
+  "year": 2025,
+  "title": "Urban Basket event pipeline",
+  "summary": "Retail client. Built event stream, success metrics, lab information system connector, audit log.",
+  "teamSize": 2,
+  "plannedWeeks": 5,
+  "actualWeeks": 6,
+  "components": [
+   {
+    "name": "Event stream",
+    "category": "data-pipeline",
+    "complexity": 1,
+    "estimatedHours": 92,
+    "actualHours": 109
+   },
+   {
+    "name": "Success metrics",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 60,
+    "actualHours": 67
+   },
+   {
+    "name": "Lab information system connector",
+    "category": "integration",
+    "complexity": 2,
+    "estimatedHours": 150,
+    "actualHours": 168
+   },
+   {
+    "name": "Audit log",
+    "category": "compliance",
+    "complexity": 2,
+    "estimatedHours": 104,
+    "actualHours": 170
+   }
+  ],
+  "estimatedHours": 406,
+  "actualHours": 514,
+  "outcome": "Live, follow-on phase sold"
+ },
+ {
+  "id": "P-129",
+  "client": "Flowdesk",
+  "industry": "SaaS",
+  "year": 2025,
+  "title": "Flowdesk customer app",
+  "summary": "SaaS client. Built push notifications, success metrics, audit log, escalation rules engine, nightly warehouse sync, playbook & videos.",
+  "teamSize": 4,
+  "plannedWeeks": 11,
+  "actualWeeks": 14,
+  "components": [
+   {
+    "name": "Push notifications",
+    "category": "mobile",
+    "complexity": 3,
+    "estimatedHours": 362,
+    "actualHours": 525
+   },
+   {
+    "name": "Success metrics",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 43,
+    "actualHours": 41
+   },
+   {
+    "name": "Audit log",
+    "category": "compliance",
+    "complexity": 2,
+    "estimatedHours": 73,
+    "actualHours": 101
+   },
+   {
+    "name": "Escalation rules engine",
+    "category": "automation",
+    "complexity": 3,
+    "estimatedHours": 280,
+    "actualHours": 353
+   },
+   {
+    "name": "Nightly warehouse sync",
+    "category": "data-pipeline",
+    "complexity": 2,
+    "estimatedHours": 151,
+    "actualHours": 184
+   },
+   {
+    "name": "Playbook & videos",
+    "category": "training",
+    "complexity": 2,
+    "estimatedHours": 90,
+    "actualHours": 82
+   }
+  ],
+  "estimatedHours": 999,
+  "actualHours": 1286,
+  "outcome": "Live"
+ },
+ {
+  "id": "P-130",
+  "client": "Crescent Bank",
+  "industry": "Banking",
+  "year": 2024,
+  "title": "Crescent Bank review workbench",
+  "summary": "Banking client. Built admin settings, workflow mapping, quality dashboard, approval workflow.",
+  "teamSize": 2,
+  "plannedWeeks": 7,
+  "actualWeeks": 9,
+  "components": [
+   {
+    "name": "Admin settings",
+    "category": "web-app",
+    "complexity": 2,
+    "estimatedHours": 171,
+    "actualHours": 180
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 57,
+    "actualHours": 57
+   },
+   {
+    "name": "Quality dashboard",
+    "category": "dashboard",
+    "complexity": 3,
+    "estimatedHours": 148,
+    "actualHours": 171
+   },
+   {
+    "name": "Approval workflow",
+    "category": "automation",
+    "complexity": 3,
+    "estimatedHours": 258,
+    "actualHours": 358
+   }
+  ],
+  "estimatedHours": 634,
+  "actualHours": 766,
+  "outcome": "Live, follow-on phase sold"
+ },
+ {
+  "id": "P-131",
+  "client": "Harbour Logistics",
+  "industry": "Logistics",
+  "year": 2025,
+  "title": "Harbour Logistics data warehouse sync",
+  "summary": "Logistics client. Built event stream, success metrics, sso (saml/oidc).",
+  "teamSize": 4,
+  "plannedWeeks": 3,
+  "actualWeeks": 3,
+  "components": [
+   {
+    "name": "Event stream",
+    "category": "data-pipeline",
+    "complexity": 1,
+    "estimatedHours": 97,
+    "actualHours": 143
+   },
+   {
+    "name": "Success metrics",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 66,
+    "actualHours": 65
+   },
+   {
+    "name": "SSO (SAML/OIDC)",
+    "category": "auth",
+    "complexity": 2,
+    "estimatedHours": 78,
+    "actualHours": 72
+   }
+  ],
+  "estimatedHours": 241,
+  "actualHours": 280,
+  "outcome": "Live, follow-on phase sold"
+ },
+ {
+  "id": "P-132",
+  "client": "Atlas Mutual",
+  "industry": "Insurance",
+  "year": 2025,
+  "title": "Atlas Mutual SLA reporting",
+  "summary": "Insurance client. Built quality dashboard, workflow mapping, whatsapp business api, lead routing.",
+  "teamSize": 4,
+  "plannedWeeks": 5,
+  "actualWeeks": 6,
+  "components": [
+   {
+    "name": "Quality dashboard",
+    "category": "dashboard",
+    "complexity": 2,
+    "estimatedHours": 137,
+    "actualHours": 139
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 67,
+    "actualHours": 69
+   },
+   {
+    "name": "WhatsApp Business API",
+    "category": "channel",
+    "complexity": 1,
+    "estimatedHours": 60,
+    "actualHours": 71
+   },
+   {
+    "name": "Lead routing",
+    "category": "automation",
+    "complexity": 3,
+    "estimatedHours": 174,
+    "actualHours": 253
+   }
+  ],
+  "estimatedHours": 438,
+  "actualHours": 532,
+  "outcome": "Live, in daily use"
+ },
+ {
+  "id": "P-133",
+  "client": "SwiftFreight",
+  "industry": "Logistics",
+  "year": 2025,
+  "title": "SwiftFreight LIS integration",
+  "summary": "Logistics client. Built crm read/write api, data audit, sla report, ios/android app.",
+  "teamSize": 2,
+  "plannedWeeks": 8,
+  "actualWeeks": 12,
+  "components": [
+   {
+    "name": "CRM read/write API",
+    "category": "integration",
+    "complexity": 2,
+    "estimatedHours": 158,
+    "actualHours": 277
+   },
+   {
+    "name": "Data audit",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 48,
+    "actualHours": 50
+   },
+   {
+    "name": "SLA report",
+    "category": "dashboard",
+    "complexity": 3,
+    "estimatedHours": 164,
+    "actualHours": 169
+   },
+   {
+    "name": "iOS/Android app",
+    "category": "mobile",
+    "complexity": 3,
+    "estimatedHours": 378,
+    "actualHours": 605
+   }
+  ],
+  "estimatedHours": 748,
+  "actualHours": 1101,
+  "outcome": "Live, follow-on phase sold"
+ },
+ {
+  "id": "P-134",
+  "client": "Apex Dental Group",
+  "industry": "Healthcare",
+  "year": 2023,
+  "title": "Apex Dental Group field app",
+  "summary": "Healthcare client. Built ios/android app, workflow mapping, sso (saml/oidc).",
+  "teamSize": 3,
+  "plannedWeeks": 6,
+  "actualWeeks": 9,
+  "components": [
+   {
+    "name": "iOS/Android app",
+    "category": "mobile",
+    "complexity": 3,
+    "estimatedHours": 385,
+    "actualHours": 598
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 3,
+    "estimatedHours": 117,
+    "actualHours": 113
+   },
+   {
+    "name": "SSO (SAML/OIDC)",
+    "category": "auth",
+    "complexity": 2,
+    "estimatedHours": 81,
+    "actualHours": 88
+   }
+  ],
+  "estimatedHours": 583,
+  "actualHours": 799,
+  "outcome": "Live, in daily use"
+ },
+ {
+  "id": "P-135",
+  "client": "SwiftFreight",
+  "industry": "Logistics",
+  "year": 2023,
+  "title": "SwiftFreight product knowledge hub",
+  "summary": "Logistics client. Built retrieval with citations, workflow mapping, auto-reply for status queries, erp order lookup, hypercare.",
+  "teamSize": 3,
+  "plannedWeeks": 6,
+  "actualWeeks": 7,
+  "components": [
+   {
+    "name": "Retrieval with citations",
+    "category": "knowledge-base",
+    "complexity": 1,
+    "estimatedHours": 90,
+    "actualHours": 100
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 32,
+    "actualHours": 34
+   },
+   {
+    "name": "Auto-reply for status queries",
+    "category": "automation",
+    "complexity": 3,
+    "estimatedHours": 248,
+    "actualHours": 214
+   },
+   {
+    "name": "ERP order lookup",
+    "category": "integration",
+    "complexity": 2,
+    "estimatedHours": 174,
+    "actualHours": 213
+   },
+   {
+    "name": "Hypercare",
+    "category": "training",
+    "complexity": 1,
+    "estimatedHours": 35,
+    "actualHours": 32
+   }
+  ],
+  "estimatedHours": 579,
+  "actualHours": 593,
+  "outcome": "Live, in daily use"
+ },
+ {
+  "id": "P-136",
+  "client": "CityStay",
+  "industry": "Hospitality",
+  "year": 2023,
+  "title": "CityStay quality dashboard",
+  "summary": "Hospitality client. Built usage analytics, success metrics, customer portal, lab information system connector, role-based access, event stream.",
+  "teamSize": 2,
+  "plannedWeeks": 8,
+  "actualWeeks": 9,
+  "components": [
+   {
+    "name": "Usage analytics",
+    "category": "dashboard",
+    "complexity": 3,
+    "estimatedHours": 198,
+    "actualHours": 199
+   },
+   {
+    "name": "Success metrics",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 40,
+    "actualHours": 36
+   },
+   {
+    "name": "Customer portal",
+    "category": "web-app",
+    "complexity": 2,
+    "estimatedHours": 170,
+    "actualHours": 191
+   },
+   {
+    "name": "Lab information system connector",
+    "category": "integration",
+    "complexity": 1,
+    "estimatedHours": 97,
+    "actualHours": 116
+   },
+   {
+    "name": "Role-based access",
+    "category": "auth",
+    "complexity": 3,
+    "estimatedHours": 131,
+    "actualHours": 164
+   },
+   {
+    "name": "Event stream",
+    "category": "data-pipeline",
+    "complexity": 1,
+    "estimatedHours": 111,
+    "actualHours": 119
+   }
+  ],
+  "estimatedHours": 747,
+  "actualHours": 825,
+  "outcome": "Live"
+ },
+ {
+  "id": "P-137",
+  "client": "Sunrise Hospitals",
+  "industry": "Healthcare",
+  "year": 2025,
+  "title": "Sunrise Hospitals data warehouse sync",
+  "summary": "Healthcare client. Built nightly warehouse sync, data audit, ios/android app, hands-on workshops, knowledge base admin, admin settings.",
+  "teamSize": 4,
+  "plannedWeeks": 12,
+  "actualWeeks": 16,
+  "components": [
+   {
+    "name": "Nightly warehouse sync",
+    "category": "data-pipeline",
+    "complexity": 2,
+    "estimatedHours": 159,
+    "actualHours": 207
+   },
+   {
+    "name": "Data audit",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 49,
+    "actualHours": 47
+   },
+   {
+    "name": "iOS/Android app",
+    "category": "mobile",
+    "complexity": 3,
+    "estimatedHours": 495,
+    "actualHours": 724
+   },
+   {
+    "name": "Hands-on workshops",
+    "category": "training",
+    "complexity": 2,
+    "estimatedHours": 69,
+    "actualHours": 59
+   },
+   {
+    "name": "Knowledge base admin",
+    "category": "knowledge-base",
+    "complexity": 3,
+    "estimatedHours": 216,
+    "actualHours": 241
+   },
+   {
+    "name": "Admin settings",
+    "category": "web-app",
+    "complexity": 1,
+    "estimatedHours": 110,
+    "actualHours": 158
+   }
+  ],
+  "estimatedHours": 1098,
+  "actualHours": 1436,
+  "outcome": "Live, expanded to second team"
+ },
+ {
+  "id": "P-138",
+  "client": "Nova Pathology",
+  "industry": "Healthcare",
+  "year": 2025,
+  "title": "Nova Pathology self-serve status replies",
+  "summary": "Healthcare client. Built escalation rules engine, data audit, event stream.",
+  "teamSize": 3,
+  "plannedWeeks": 6,
+  "actualWeeks": 6,
+  "components": [
+   {
+    "name": "Escalation rules engine",
+    "category": "automation",
+    "complexity": 3,
+    "estimatedHours": 271,
+    "actualHours": 303
+   },
+   {
+    "name": "Data audit",
+    "category": "discovery",
+    "complexity": 3,
+    "estimatedHours": 78,
+    "actualHours": 79
+   },
+   {
+    "name": "Event stream",
+    "category": "data-pipeline",
+    "complexity": 2,
+    "estimatedHours": 153,
+    "actualHours": 183
+   }
+  ],
+  "estimatedHours": 502,
+  "actualHours": 565,
+  "outcome": "Live, expanded to second team"
+ },
+ {
+  "id": "P-139",
+  "client": "Lumen Electronics",
+  "industry": "Retail",
+  "year": 2024,
+  "title": "Lumen Electronics policy search",
+  "summary": "Retail client. Built knowledge base admin, success metrics, playbook & videos, ivr hooks.",
+  "teamSize": 2,
+  "plannedWeeks": 3,
+  "actualWeeks": 3,
+  "components": [
+   {
+    "name": "Knowledge base admin",
+    "category": "knowledge-base",
+    "complexity": 1,
+    "estimatedHours": 72,
+    "actualHours": 82
+   },
+   {
+    "name": "Success metrics",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 46,
+    "actualHours": 52
+   },
+   {
+    "name": "Playbook & videos",
+    "category": "training",
+    "complexity": 1,
+    "estimatedHours": 31,
+    "actualHours": 30
+   },
+   {
+    "name": "IVR hooks",
+    "category": "channel",
+    "complexity": 1,
+    "estimatedHours": 67,
+    "actualHours": 81
+   }
+  ],
+  "estimatedHours": 216,
+  "actualHours": 245,
+  "outcome": "Live"
+ },
+ {
+  "id": "P-140",
+  "client": "Metro Estates",
+  "industry": "Real estate",
+  "year": 2024,
+  "title": "Metro Estates review workbench",
+  "summary": "Real estate client. Built agent console ui, success metrics, csv import pipeline, draft-reply assistant.",
+  "teamSize": 3,
+  "plannedWeeks": 9,
+  "actualWeeks": 11,
+  "components": [
+   {
+    "name": "Agent console UI",
+    "category": "web-app",
+    "complexity": 3,
+    "estimatedHours": 329,
+    "actualHours": 472
+   },
+   {
+    "name": "Success metrics",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 41,
+    "actualHours": 46
+   },
+   {
+    "name": "CSV import pipeline",
+    "category": "data-pipeline",
+    "complexity": 3,
+    "estimatedHours": 273,
+    "actualHours": 314
+   },
+   {
+    "name": "Draft-reply assistant",
+    "category": "llm-assistant",
+    "complexity": 1,
+    "estimatedHours": 143,
+    "actualHours": 166
+   }
+  ],
+  "estimatedHours": 786,
+  "actualHours": 998,
+  "outcome": "Live, expanded to second team"
+ },
+ {
+  "id": "P-141",
+  "client": "ShieldSure",
+  "industry": "Insurance",
+  "year": 2023,
+  "title": "ShieldSure SOP knowledge base",
+  "summary": "Insurance client. Built retrieval with citations, data audit, push notifications, slack app.",
+  "teamSize": 4,
+  "plannedWeeks": 6,
+  "actualWeeks": 7,
+  "components": [
+   {
+    "name": "Retrieval with citations",
+    "category": "knowledge-base",
+    "complexity": 3,
+    "estimatedHours": 215,
+    "actualHours": 276
+   },
+   {
+    "name": "Data audit",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 61,
+    "actualHours": 68
+   },
+   {
+    "name": "Push notifications",
+    "category": "mobile",
+    "complexity": 1,
+    "estimatedHours": 166,
+    "actualHours": 219
+   },
+   {
+    "name": "Slack app",
+    "category": "channel",
+    "complexity": 2,
+    "estimatedHours": 83,
+    "actualHours": 102
+   }
+  ],
+  "estimatedHours": 525,
+  "actualHours": 665,
+  "outcome": "Live, follow-on phase sold"
+ },
+ {
+  "id": "P-142",
+  "client": "CityStay",
+  "industry": "Hospitality",
+  "year": 2025,
+  "title": "CityStay event pipeline",
+  "summary": "Hospitality client. Built csv import pipeline, workflow mapping, lead routing.",
+  "teamSize": 3,
+  "plannedWeeks": 4,
+  "actualWeeks": 5,
+  "components": [
+   {
+    "name": "CSV import pipeline",
+    "category": "data-pipeline",
+    "complexity": 1,
+    "estimatedHours": 108,
+    "actualHours": 147
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 66,
+    "actualHours": 60
+   },
+   {
+    "name": "Lead routing",
+    "category": "automation",
+    "complexity": 2,
+    "estimatedHours": 172,
+    "actualHours": 230
+   }
+  ],
+  "estimatedHours": 346,
+  "actualHours": 437,
+  "outcome": "Live, expanded to second team"
+ },
+ {
+  "id": "P-143",
+  "client": "Oasis Resorts",
+  "industry": "Hospitality",
+  "year": 2023,
+  "title": "Oasis Resorts self-serve status replies",
+  "summary": "Hospitality client. Built auto-reply for status queries, data audit, nightly warehouse sync, hypercare, ticketing system sync.",
+  "teamSize": 4,
+  "plannedWeeks": 10,
+  "actualWeeks": 14,
+  "components": [
+   {
+    "name": "Auto-reply for status queries",
+    "category": "automation",
+    "complexity": 3,
+    "estimatedHours": 252,
+    "actualHours": 425
+   },
+   {
+    "name": "Data audit",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 66,
+    "actualHours": 69
+   },
+   {
+    "name": "Nightly warehouse sync",
+    "category": "data-pipeline",
+    "complexity": 3,
+    "estimatedHours": 209,
+    "actualHours": 307
+   },
+   {
+    "name": "Hypercare",
+    "category": "training",
+    "complexity": 3,
+    "estimatedHours": 94,
+    "actualHours": 90
+   },
+   {
+    "name": "Ticketing system sync",
+    "category": "integration",
+    "complexity": 3,
+    "estimatedHours": 293,
+    "actualHours": 405
+   }
+  ],
+  "estimatedHours": 914,
+  "actualHours": 1296,
+  "outcome": "Pilot completed"
+ },
+ {
+  "id": "P-144",
+  "client": "SwiftFreight",
+  "industry": "Logistics",
+  "year": 2023,
+  "title": "SwiftFreight lead qualification flow",
+  "summary": "Logistics client. Built auto-reply for status queries, workflow mapping, q&a assistant, event stream.",
+  "teamSize": 3,
+  "plannedWeeks": 6,
+  "actualWeeks": 8,
+  "components": [
+   {
+    "name": "Auto-reply for status queries",
+    "category": "automation",
+    "complexity": 3,
+    "estimatedHours": 243,
+    "actualHours": 300
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 56,
+    "actualHours": 55
+   },
+   {
+    "name": "Q&A assistant",
+    "category": "llm-assistant",
+    "complexity": 1,
+    "estimatedHours": 116,
+    "actualHours": 144
+   },
+   {
+    "name": "Event stream",
+    "category": "data-pipeline",
+    "complexity": 3,
+    "estimatedHours": 150,
+    "actualHours": 248
+   }
+  ],
+  "estimatedHours": 565,
+  "actualHours": 747,
+  "outcome": "Live, in daily use"
+ },
+ {
+  "id": "P-145",
+  "client": "Crescent Bank",
+  "industry": "Banking",
+  "year": 2024,
+  "title": "Crescent Bank lead qualification flow",
+  "summary": "Banking client. Built lead routing, workflow mapping, usage analytics, crm read/write api.",
+  "teamSize": 3,
+  "plannedWeeks": 7,
+  "actualWeeks": 9,
+  "components": [
+   {
+    "name": "Lead routing",
+    "category": "automation",
+    "complexity": 1,
+    "estimatedHours": 80,
+    "actualHours": 91
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 3,
+    "estimatedHours": 92,
+    "actualHours": 100
+   },
+   {
+    "name": "Usage analytics",
+    "category": "dashboard",
+    "complexity": 3,
+    "estimatedHours": 182,
+    "actualHours": 189
+   },
+   {
+    "name": "CRM read/write API",
+    "category": "integration",
+    "complexity": 3,
+    "estimatedHours": 317,
+    "actualHours": 398
+   }
+  ],
+  "estimatedHours": 671,
+  "actualHours": 778,
+  "outcome": "Live, expanded to second team"
+ },
+ {
+  "id": "P-146",
+  "client": "RoadRunner Cargo",
+  "industry": "Logistics",
+  "year": 2023,
+  "title": "RoadRunner Cargo customer app",
+  "summary": "Logistics client. Built ios/android app, success metrics, csv import pipeline.",
+  "teamSize": 3,
+  "plannedWeeks": 5,
+  "actualWeeks": 7,
+  "components": [
+   {
+    "name": "iOS/Android app",
+    "category": "mobile",
+    "complexity": 2,
+    "estimatedHours": 294,
+    "actualHours": 466
+   },
+   {
+    "name": "Success metrics",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 82,
+    "actualHours": 85
+   },
+   {
+    "name": "CSV import pipeline",
+    "category": "data-pipeline",
+    "complexity": 1,
+    "estimatedHours": 91,
+    "actualHours": 100
+   }
+  ],
+  "estimatedHours": 467,
+  "actualHours": 651,
+  "outcome": "Pilot completed"
+ },
+ {
+  "id": "P-147",
+  "client": "Vertex Plastics",
+  "industry": "Manufacturing",
+  "year": 2023,
+  "title": "Vertex Plastics ticketing integration",
+  "summary": "Manufacturing client. Built crm read/write api, data audit, approval workflow.",
+  "teamSize": 2,
+  "plannedWeeks": 5,
+  "actualWeeks": 7,
+  "components": [
+   {
+    "name": "CRM read/write API",
+    "category": "integration",
+    "complexity": 2,
+    "estimatedHours": 210,
+    "actualHours": 350
+   },
+   {
+    "name": "Data audit",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 59,
+    "actualHours": 60
+   },
+   {
+    "name": "Approval workflow",
+    "category": "automation",
+    "complexity": 2,
+    "estimatedHours": 179,
+    "actualHours": 245
+   }
+  ],
+  "estimatedHours": 448,
+  "actualHours": 655,
+  "outcome": "Live, follow-on phase sold"
+ },
+ {
+  "id": "P-148",
+  "client": "Vertex Plastics",
+  "industry": "Manufacturing",
+  "year": 2024,
+  "title": "Vertex Plastics agent console",
+  "summary": "Manufacturing client. Built admin settings, workflow mapping, csv import pipeline, usage analytics.",
+  "teamSize": 3,
+  "plannedWeeks": 8,
+  "actualWeeks": 10,
+  "components": [
+   {
+    "name": "Admin settings",
+    "category": "web-app",
+    "complexity": 3,
+    "estimatedHours": 248,
+    "actualHours": 306
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 36,
+    "actualHours": 34
+   },
+   {
+    "name": "CSV import pipeline",
+    "category": "data-pipeline",
+    "complexity": 3,
+    "estimatedHours": 240,
+    "actualHours": 333
+   },
+   {
+    "name": "Usage analytics",
+    "category": "dashboard",
+    "complexity": 3,
+    "estimatedHours": 235,
+    "actualHours": 207
+   }
+  ],
+  "estimatedHours": 759,
+  "actualHours": 880,
+  "outcome": "Live"
+ },
+ {
+  "id": "P-149",
+  "client": "Pioneer Credit Union",
+  "industry": "Banking",
+  "year": 2024,
+  "title": "Pioneer Credit Union SLA reporting",
+  "summary": "Banking client. Built sla report, workflow mapping, ticketing system sync, email inbox connector, hands-on workshops.",
+  "teamSize": 3,
+  "plannedWeeks": 5,
+  "actualWeeks": 6,
+  "components": [
+   {
+    "name": "SLA report",
+    "category": "dashboard",
+    "complexity": 1,
+    "estimatedHours": 56,
+    "actualHours": 67
+   },
+   {
+    "name": "Workflow mapping",
+    "category": "discovery",
+    "complexity": 3,
+    "estimatedHours": 83,
+    "actualHours": 79
+   },
+   {
+    "name": "Ticketing system sync",
+    "category": "integration",
+    "complexity": 3,
+    "estimatedHours": 232,
+    "actualHours": 301
+   },
+   {
+    "name": "Email inbox connector",
+    "category": "channel",
+    "complexity": 2,
+    "estimatedHours": 80,
+    "actualHours": 89
+   },
+   {
+    "name": "Hands-on workshops",
+    "category": "training",
+    "complexity": 1,
+    "estimatedHours": 34,
+    "actualHours": 34
+   }
+  ],
+  "estimatedHours": 485,
+  "actualHours": 570,
+  "outcome": "Pilot completed"
+ },
+ {
+  "id": "P-150",
+  "client": "Forge Industrial",
+  "industry": "Manufacturing",
+  "year": 2025,
+  "title": "Forge Industrial event pipeline",
+  "summary": "Manufacturing client. Built nightly warehouse sync, success metrics, consent capture, escalation rules engine.",
+  "teamSize": 4,
+  "plannedWeeks": 4,
+  "actualWeeks": 6,
+  "components": [
+   {
+    "name": "Nightly warehouse sync",
+    "category": "data-pipeline",
+    "complexity": 2,
+    "estimatedHours": 202,
+    "actualHours": 283
+   },
+   {
+    "name": "Success metrics",
+    "category": "discovery",
+    "complexity": 1,
+    "estimatedHours": 46,
+    "actualHours": 47
+   },
+   {
+    "name": "Consent capture",
+    "category": "compliance",
+    "complexity": 1,
+    "estimatedHours": 56,
+    "actualHours": 79
+   },
+   {
+    "name": "Escalation rules engine",
+    "category": "automation",
+    "complexity": 1,
+    "estimatedHours": 90,
+    "actualHours": 123
+   }
+  ],
+  "estimatedHours": 394,
+  "actualHours": 532,
+  "outcome": "Pilot completed"
+ },
+ {
+  "id": "P-151",
+  "client": "Vertex Plastics",
+  "industry": "Manufacturing",
+  "year": 2024,
+  "title": "Vertex Plastics self-serve status replies",
+  "summary": "Manufacturing client. Built auto-reply for status queries, data audit, knowledge base admin, event stream, role-based access, agent console ui.",
+  "teamSize": 3,
+  "plannedWeeks": 6,
+  "actualWeeks": 7,
+  "components": [
+   {
+    "name": "Auto-reply for status queries",
+    "category": "automation",
+    "complexity": 1,
+    "estimatedHours": 93,
+    "actualHours": 153
+   },
+   {
+    "name": "Data audit",
+    "category": "discovery",
+    "complexity": 2,
+    "estimatedHours": 77,
+    "actualHours": 66
+   },
+   {
+    "name": "Knowledge base admin",
+    "category": "knowledge-base",
+    "complexity": 1,
+    "estimatedHours": 100,
+    "actualHours": 109
+   },
+   {
+    "name": "Event stream",
+    "category": "data-pipeline",
+    "complexity": 1,
+    "estimatedHours": 85,
+    "actualHours": 106
+   },
+   {
+    "name": "Role-based access",
+    "category": "auth",
+    "complexity": 2,
+    "estimatedHours": 56,
+    "actualHours": 54
+   },
+   {
+    "name": "Agent console UI",
+    "category": "web-app",
+    "complexity": 1,
+    "estimatedHours": 104,
+    "actualHours": 115
+   }
+  ],
+  "estimatedHours": 515,
+  "actualHours": 603,
+  "outcome": "Live, in daily use"
+ }
+]
